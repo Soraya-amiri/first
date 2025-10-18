@@ -4,14 +4,29 @@ A small starter repository named "first" that demonstrates a basic project struc
 
 ## Description
 
-This repository is intended as a minimal example for getting started with GitHub and practicing repository workflows. It currently contains no source code files; this README explains the purpose and how to get started.
+This repository now contains a minimal example of forecasting daily prices with
+Python.  A synthetic dataset of historical prices is provided along with a
+script that trains a polynomial regression model and produces a one-week
+forecast.
 
 ## Usage
 
-- Clone the repository: git clone https://github.com/Soraya-amiri/first.git
-- Navigate into the directory: cd first
+1. Create and activate a virtual environment.
+2. Install dependencies:
 
-Add your project files and commit as usual.
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the example forecaster:
+
+   ```bash
+   python -m src.price_forecasting
+   ```
+
+   The script will print the hold-out mean absolute error and a table of the
+   next seven days of predicted prices based on the sample dataset in
+   `data/price_history.csv`.
 
 ## Contributing
 
@@ -19,7 +34,8 @@ Contributions are welcome. Open issues or pull requests to propose changes.
 
 ## License
 
-Specify a license for your project (for example, MIT). If you don't know which one to use, see https://choosealicense.com/.
+Specify a license for your project (for example, MIT). If you don't know which
+one to use, see https://choosealicense.com/.
 
 ## Author
 
